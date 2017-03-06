@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery 练习网页</title>
+	<style>
+		.div1{
+			height: 100px;
+			margin: 0px 50px;
+			width: 100px;
+			background: #6CD291;
+			border:3px solid black;
+			border-radius: 10px 20px;
+			color:#849;
+			float: left;
+		}
+		.div2{
+			background: red;
+		}
+	</style>
+	<script src="js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<div class="div1">divdiv</div>
+	<div class="div1" id="mover"></div>
+	<div class="div1"></div>
+	<button id="run">run</button>
+</body>
+<script>
+$('#run').click(function() {
+	/* Act on the event */
+	$("div:animated").toggleClass("div2");
+});
+	function animateIt(){
+	$('#mover').slideToggle("slow",animateIt);
+	}
+animateIt();
+</script>
+</html>

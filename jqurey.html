@@ -29,11 +29,42 @@
 <script>
 $('#run').click(function() {
 	/* Act on the event */
-	$("div:animated").toggleClass("div2");
+	$("div:animated").toggleClass("div2");//添加个class，重复添加可以删除。很方便！！！
 });
 	function animateIt(){
 	$('#mover').slideToggle("slow",animateIt);
 	}
 animateIt();
+//var fakeArray = {"length": 1, 0: "Addy", 1: "Subtracty"};
+ var fakeArray={2:"length","addy":1,"sb":5};
+//$.map()返回的参数，第一个val为后面的值，第二个i为前面的参数。！！
+var realArray = $.makeArray( fakeArray );
+ //转化为json数组的格式,转化之后的数组index为0，只有一组。
+
+$.map( realArray, function(val, i) {
+  console.log(val);
+  console.log(i);
+  // do something
+});
+ 	// 数组方法:join()的使用
+// 	var arr = new Array(3)
+// 	arr[0]="a";
+// 	arr[1]="b";
+// 	arr[2]="c";
+// 	//var arr = ['a','b','c','d'];
+// 	var arr1 = arr.join('1');
+// 	document.write(arr1);
+// 	var arr = new Array(3)
+// arr[0] = "George"
+// arr[1] = "John"
+// arr[2] = "Thomas"
+// document.write(arr.join("."))
+var arr = ['a','b','c'];
+	 arr = jQuery.map(arr, function(a) {
+	  return a+a;
+	});
+	$('.div1').html(arr.join('..'));
+
+	//下一课，表单
 </script>
 </html>

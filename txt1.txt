@@ -1,0 +1,6 @@
+1 jq的class添加删除
+2 jq的捕捉动作
+3 jq的数组
+4 jq的Map遍历
+5 js的join用法
+6 .submit()用法？
